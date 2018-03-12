@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#pit{
+				border:1px solid red;
+				position: relative;
+				margin: 50%;
+			}
+		</style>
+		<script type="text/javascript">
+			//什么是事件？就是你做了什么然后怎么样了
+//			怎么样了谁，然后怎么怎么样
+//			怎么样了 - 触发条件
+//			谁 - 事件源
+//			然后怎么怎么样 - 事件处理程序
+
+//			例如：我见到一个傻逼，打了他一顿
+//			触发事件-一个傻逼
+//			触发事件源-见到
+//			事件处理程序-打了他一顿
+
+//			等全部内容加载完之后再执行window.onload
+				window.onload =function(){
+//					含有id是pit的元素,然后绑定事件：document.getElementById("pit")
+					document.getElementById("pit").onclick = function(){//点击事件onclick
+					alert("一起走下去吧~");//结果
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<img src="img/004.jpeg" id="pit" />
+	</body>
+</html>

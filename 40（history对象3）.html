@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: darkred;
+			}
+		</style>
+
+		<script type="text/javascript">
+			
+			document.write(history.length)//返回浏览器历史列表中的 URL 数量
+			
+//			var jg = history.back();//返回前一个访问过的页面，后退
+//			document.write(jg);
+			
+//			var jg =history.forward();返回后一个访问过的页面,前进
+
+//			var jg = history.go(-1);跟history.back效果差不多
+//			document.write(jg);
+		setTimeout(function(){
+			history.back();
+		},2000)
+		</script>
+		<h1>这是最后一页</h1>
+	
+	</head>
+	<body>
+	</body>
+</html>

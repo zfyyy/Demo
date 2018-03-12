@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		</style>
+		<script type="text/javascript">
+//			BOM定时器
+//		function daoshu(){
+//		document.write("我爱你")
+//		}
+//		var ds =setInterval(daoshu,2000);//每隔2秒一次，定时器不是循环,不断执行
+//			document.write(ds);
+			
+//			var ds =setTimeout(daoshu,2000);//2秒后结束，不再重复出现,只执行一次
+//			document.write(ds)
+
+
+//			另一种写法
+//			setInterval(function(){
+//				document.write("傻逼啊你")
+//			},2000);
+			
+//			
+		var ls = setInterval(function(){
+			document.write("你好啊")
+		},2000);
+											//让定时器在5秒时结束倒数
+		setTimeout(function(){
+			document.write("删除定时器");
+			clearInterval(ls);
+		},5000)
+			
+//			var ls = setTimeout(function(){
+//				document.write("炸弹倒数5秒爆炸");
+//			},5000)									//让定时器在3秒时候停止
+//			setTimeout(function(){
+//				document.write("炸弹已经被解除");
+//				clearTimeout(ls);
+//			},3000)
+			
+//	
+	
+//			var tingzhi = setInterval(function(){
+//				document.write("凯凯一直在说话:我好帅啊","<br />")
+//			},800)
+//			setTimeout(function(){
+//				document.write("凯凯自恋终于停止了")
+//				clearTimeout(tingzhi);			
+//			},5000)
+			
+			
+//			var tingzhi = setTimeout(function(){
+//				document.write("凯凯5秒后又要自恋了，又要说：我好帅我好帅")
+//			},5000)
+//			setTimeout(function(){
+//				document.write("我在他说话的时候揍了他一顿，他已经不能自恋说好帅了")
+//				clearTimeout(tingzhi);
+//			},3000)
+	
+//		
+//	var jieguo = leijia(500);
+//	document.write(jieguo)
+</script>
+
+	</head>
+	<body>
+	
+    
+	</body>
+</html>

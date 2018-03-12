@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//构造对象，var obj ={属性名：属性值....}；
+						
+//			1.对象是什么?
+//		 	    例如：人就是对象
+
+//			2.对象有什么特征.特征也就是属性,属性是什么样的?
+//			    例如:人的体重（多重多轻）,身高（多高）,年龄（多大）
+
+//			3.对象的方法是什么,对象的方法能做什么?（对象方法是一系列人的行为动作等）
+//			  例如:人能吃喝拉撒睡
+			
+//			类（构造函数）是一种规则,类可以创建出对象
+//			用原生方式构建一个对象（也叫json格式创建对象）
+//			制造一辆法拉利
+			var falali = {
+//				属性，6个变量
+				price:"500万",				//属性指这个对象有什么特征
+				color:{a:"红色",b:"黑色"},
+				weight:"500kg",
+				fadouji:"TC-9引擎",
+				lunzi:"越野轮",
+				caizhi:"钛合金",
+				//属性的方法，2个函数
+				music:function(){
+					document.write("能听音乐");//当属性值为函数时，这就是对象的方法，方法就是一系列行为动作
+				},
+				kaiche:function(){
+					document.write("能开去比赛，能开去旅游");
+				}
+			};
+			
+			//访问对象的属性:格式：对象.属性；
+			document.write(falali.price,"<br />");//如果对象属性值只有一个那就直接访问falali.price
+			document.write(falali.color.a,"<br />");//如果对象的属性值有多个，你想访问其中一个，那就用（.）访问falali.color.b
+			falali.music();//函数就是-访问对象的方法：格式：对象.属性();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

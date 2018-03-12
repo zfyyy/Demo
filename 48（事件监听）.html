@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#kuai{
+				background: red;
+				width: 500px;
+				height: 300px;
+				margin: auto;
+			}
+		</style>
+		<script type="text/javascript">
+			
+//			普通事件绑定。后一个会覆盖前面事件，只执行一个
+//				window.onload = function(){
+//					document.getElementById("kuai").onclick = function(){
+//						alert("你好啊");
+//					}
+//					document.getElementById("kuai").onclick = function(){
+//						alert("你好啊啊");}
+//				}
+
+			window.onload = function(){
+//				//事件监听
+////				不会覆盖上个事件，可以同时执行
+////				addEventListener()属于w3c标准,不支持ie低版本
+////				addEventListener(事件，函数)第一个参数名不要加on
+//				document.getElementById("kuai").addEventListener("dblclick",function(){
+//					alert("你好");
+//				})	
+//				
+				document.getElementById("kuai").addEventListener("dblclick",function(){
+					alert("你好啊");
+				})
+			}
+
+				
+					
+		</script>
+	</head>
+	<body>
+		<div id="kuai"></div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>这是鱼爸爸的</title>
+		<script type="text/javascript">
+//			1、自己写一个函数，用来取得一个数组中的最大的值arr = [1,56,23,6,43,87,3,5,55];
+//				函数,数组,for循环,
+			function max(arr){
+				var shiling = arr[0];
+				for (a=0;a<9;a++) {//循环数组
+					if(shiling<arr[a]){//	
+						shiling =arr[a];
+					}
+				}
+				return shiling;
+			}
+				var sz = [1,56,23,6,43,87,3,5,55];
+				var re = max(sz);
+				document.write(re);
+				document.write("<br />")
+			
+			
+
+//			2、用for循环遍历二位数组（依次输出每一个景点，每个景点后面都加上“很好玩”三个字）
+//'狼牙山','白洋淀','北戴河'],['黄山','九华山','天柱山'],['少林寺','嵩山','龙门石窟','白马寺'],['泰山','大明湖','趵突泉','梁山','沂蒙山','三孔'],['平遥古城','五台山'
+			var jingdian = [['狼牙山','白洋淀','北戴河'],['黄山','九华山','天柱山'],['少林寺','嵩山','龙门石窟','白马寺'],['泰山','大明湖','趵突泉','梁山','沂蒙山','三孔'],['平遥古城','五台山']];
+				for (a=0;a<5;a++) {//循环a数组
+					for(b=0;b<jingdian[a].length;b++){//循环b数组
+						document.write(jingdian[a][b]+"很好玩、");
+					}
+				document.write("<br />")
+				}
+				
+				
+				
+				
+				
+				
+			
+//			3、写一个函数，传入一个二位数组，返回二维数组中长度最大的那个子数组的序号
+
+				
+				function long(jingdian){
+					var lingshi = jingdian[0];
+					
+					for (a=0;a<5;a++) {
+						if(lingshi.length<jingdian[a].length){
+							lingshi = jingdian[a].length;
+						}
+					}return lingshi;
+				}
+				var jingdian = [[1,2,3],[4,5,6],[7,8,9,10],[11,12,13,14,15,16],[17,18]];
+				
+				var jieguo = long(jingdian);
+				document.write(jieguo);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

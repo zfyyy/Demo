@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			数组属于对象类型:很多属性（变量）和方法（函数）的集合体；
+			
+//			隐性创建数组，数组的序号(下标)从0开始
+//			数组的length长度永远比下标大1
+//			var dianying = ["爱情剧","动作剧","犯罪剧","喜剧"];
+			
+			//数组的长度length
+//			document.write(dianying.length);
+
+//			如果我想查看爱情剧和喜剧
+//			document.write(dianying[0],"<br />",dianying[3]);
+			
+//			替换数据 
+//			dianying[1] = "18禁片";
+//			document.write(dianying);
+
+//			元素的增加
+//			dianying[4] = "玄幻剧";
+//			dianying[5] = "仙侠剧";
+//			document.write(dianying);
+
+//			dianying[dianying.length] = "脑残剧";
+//			dianying[dianying.length] = "耽美剧";
+//			document.write(dianying);
+			
+			
+		
+		var dongman =["火影忍者","海贼王","龙与虎","战斗陀螺","魔法少女"]//数组创建
+		
+		document.write(dongman.length,"<br />");//查看数组长度
+		
+		document.write(dongman[3],"<br />"); //查看第四个数据
+		
+		dongman[3] = "死神";//替换数据-把战斗陀螺替换成死神
+		document.write(dongman,"<br />");//替换结果
+		
+//		新增元素5和6
+		dongman[5] = "fate stay night";//新增5号元素，这种增加是按序号来增加
+		dongman[dongman.length] = "紫罗兰花园";//新增6号元素，这种是按数组长度length来增加
+		document.write(dongman);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

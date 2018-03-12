@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#one{
+				width: 500px;
+				height: 200px;
+				background: pink;
+				margin: 20px auto;
+			}
+		</style>
+		<script type="text/javascript">
+//			浏览器兼容性问题-事件监听.怎么判断
+			window.onload = function(){
+				
+				if(document.all){//用document.all来判断浏览器规范
+					document.getElementById("one").attachEvent("onmousemove",function(){
+						alert("触发了，在低版本ie才能运行");//attachEvent低版本ie运行得了
+					})
+				}else{
+					document.getElementById("one").addEventListener("mousemove",function(){
+					alert("w3c触发啦！！！");//addEventListener属性低版本ie运行不了
+					})
+				}	
+				
+			}
+				
+		</script>
+	</head>
+	<body>
+		<div id="one"></div>
+	</body>
+</html>

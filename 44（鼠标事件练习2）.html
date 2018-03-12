@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#kuai{
+				background: pink;
+				width: 400px;
+				height: 250px;
+				margin: auto;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				document.getElementById("juzhong").onsubmit = function(){
+					alert("提交成功，曹尼玛");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div id="kuai">
+			<form id="juzhong">
+				账号名：<input type="text" id="one" value="请输入"/><br /><br />
+				密码：<input type="password" id="pas" /><br /><br />
+				<input type="submit" id="quxiao" value="点击提交"/>
+					<input type="button" id="queding" value="取消"/>
+					
+			</form>
+		</div>
+	</body>
+</html>

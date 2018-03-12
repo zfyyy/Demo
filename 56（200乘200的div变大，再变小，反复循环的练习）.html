@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#red{
+				background: red;
+				margin: auto;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			
+			window.onload =function(){
+				//抓取元素
+				var btn =document.getElementById("btn");
+				var red = document.getElementById("red");
+				var time;//有用的值
+				var wid=10;//宽度的变量值
+				var hig =10;//高度的变量值
+				
+					btn.onclick = function(){//创建点击事件
+						
+						clearInterval(time)//删除定时器
+						
+						time = setInterval(function(){//添加定时器
+							//宽度
+							var startWidth =red.style.width;//获得初始宽度200px
+							var new_Width = parseInt(red.style.width)+wid;//获得新的宽度200px+10；
+							red.style.width = new_Width+"px";//新的宽度赋值回初始宽度
+							//高度
+							var startheight =red.style.height;//获得初始高度200px
+							var new_height = parseInt(red.style.height)+hig;//获得新的高度200px+10；
+							red.style.height = new_height+"px";//新的高度赋值回初始高度
+						
+							if(new_Width ==500&&new_height==500){//判断边界缩小
+								wid =-10,hig=-10;
+								
+							}else if(new_Width==0&&new_height==0){//判断边界变大
+								wid =10,hig=10;
+							}	
+						},100)	
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点击变大缩小" />
+		<br /><br />
+		<div id="red" style="width: 200px;height: 200px;"></div>
+	</body>
+</html>

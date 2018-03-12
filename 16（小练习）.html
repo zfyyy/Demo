@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>这是鱼爸爸的网址</title>
+	<script type="text/javascript">
+//		正三角+乘法表
+//		for (a=1;a<=9;a++) {
+//		
+//			for (b=1;b<=a;b++) {
+//				document.write(b+"*"+a+"="+a*b);
+//				document.write("&nbsp;&nbsp;&nbsp")
+//			}
+//			document.write("<br />")
+//		}
+		
+//		金字塔de=“自定义”
+		var de = prompt("请输入金字塔层数："); 
+	for (a=1;a<=de;a++) {
+//		8-当前行数
+		for (i=0;i<de-a;i++) {
+			document.write("-")
+		}
+//		b<当前行数*2-1
+		for (j=0;j<a*2-1;j++) {
+			document.write("b")
+		}
+		document.write("<br />")
+	}
+</script>
+	</head>
+	<body>
+		<!--小结：
+	
+		当判断某种范围的时候最好用if
+		格式：1.单支:if语句if(条件){条件成立执行的语句}
+		      2.双支：if(条件){条件成立的时候执行的代码}else{条件不成立的时候执行的代码}
+		
+		当判断单个值时候用switch
+		格式：switch(变量任何的数据类型){
+			case 值1:
+			表达式1；......... 
+			default:
+			表达式；
+			
+		for一般是用于循环指定的次数
+		格式：for(变量=初始值;变量<=结束值;变化值){循环体}-->
+		
+	</body>
+</html>

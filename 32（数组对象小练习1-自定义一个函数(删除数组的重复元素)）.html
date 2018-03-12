@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//		1、自定义一个函数(删除数组的重复元素)
+			
+		function chongfu(arr){
+			for (i=0;i<arr.length;i++) {//循环出i元素的个数+j循环的个数*11；
+					for (j=i+1;j<arr.length;j++) {//循环出j元素的个数
+						if (arr[i]==arr[j]) {//比较arr【i】是否等于arr【j】
+							arr.splice(j,1);//等于的话执行这行删除这个j
+							j--;
+						} 
+					}
+				}
+			return arr;
+			}
+		var shuzu = ['a','b','c','a','a','a','d','e','c','f','d'];
+		var jieguo =chongfu(shuzu);
+		document.write(jieguo,"<br />","<br />","<br />","<br />","<br />","<br />","<br />");
+		
+	
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

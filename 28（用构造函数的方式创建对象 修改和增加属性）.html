@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//				用构造函数创建对,this指某个东西
+				function sj(){
+					this.price = "1200";
+					this.weight = "200kg";
+					this.color = "金色";
+					this.music =function(){
+						document.write("能听歌");
+					}
+					this.picture = function(){
+						document.write("能拍照");
+					}
+				}
+				var xiaomi5a = new sj();//创建一部小米5a，this=小米5a
+				
+				xiaomi5a.price = "1500";//小米5a的价格，替换对象的属性
+				document.write(xiaomi5a.price,"<br />");//输出
+				
+				xiaomi5a.chicun = "5.5寸";//增加小米5a的尺寸，新增对象的属性
+				document.write(xiaomi5a.chicun,"<br />");	//输出
+				
+				xiaomi5a.music= function(){				//能听歌，替换对象方法
+					document.write("打dj")
+					}
+				xiaomi5a.music();document.write("<br />")
+				xiaomi5a.picture();//拍照功能，对象的方法
+				
+			////////	////////	////////	////////	////////	////////	////////
+			var xiaomi4a = new sj();
+			
+			document.write(xiaomi4a.price,"<br />");//4a的属性跟5a的属性都是独立的不一样的
+			
+			xiaomi4a.game = function(){			//新增一个方法
+				document.write("玩王者荣耀");
+			}
+			xiaomi4a.game();
+				
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

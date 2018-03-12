@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: wheat;
+			}
+			#waik,#red,#blue,#green,#pink{
+				width: 500px;
+				height: 100px;
+				text-align: center;
+			}
+			#red{background: red;}
+			#blue{background: cadetblue;}
+			#green{background: green;}
+			#pink{background: hotpink;}
+		</style>
+			<script type="text/javascript">
+			window.onload = function(){
+			 document.getElementById("red").onclick = function(){
+					document.body.style.background = "red"
+				}
+			 document.getElementById("blue").onclick = function(){
+				document.body.style.backgroundColor = "blue";
+				}
+			 document.getElementById("green").onclick = function(){
+				document.body.style.backgroundColor = "green";
+				}
+			 document.getElementById("pink").onclick = function(){
+				document.body.style.backgroundColor = "pink";
+				}
+			}
+		setTimeout(function(){
+				document.write("效果停止啦")
+			},4000);
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="waik">
+			<div id="red">1</div>
+			<div id="blue">2</div>
+			<div id="green">3</div>
+			<div id="pink">4</div>
+		</div>
+	
+	</body>
+</html>

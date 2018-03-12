@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#tupian{
+				border: 1px solid red;
+				display: block;
+				margin: auto;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			
+			//鼠标点击onclick
+//			window.onload = function(){//onload页面事件
+////				找到id是tupian的元素
+//				document.getElementById("tupian").onclick = function(){
+//					alert("我们在一起了")
+//				}
+//			}	
+
+			//鼠标双击事件ondblclick
+//			window.onload = function(){
+//				document.getElementById("tupian").ondblclick= function(){
+//					alert("我们很相爱的~");
+//				}
+//			}
+			
+			//鼠标按住事件onmousedown
+//			window.onload = function(){
+//				document.getElementById("tupian").onmousedown = function(){
+//					alert("一生一世啊啊啊啊");
+//				}
+//			}
+
+			//鼠标放开事件onmouseup
+//			window.onload = function(){
+//				document.getElementById("tupian").onmouseup = function(){
+//					alert("笔芯笔芯！");
+//				}
+//			}
+
+			//鼠标移动事件，移到到触发源位置（只要是在内部）会一直触发事件onmousemove
+//			window.onload = function(){
+//				document.getElementById("tupian").onmousemove = function(){
+//					alert("今天心情很开心啊");
+//				}
+//			}
+			
+			//鼠标移入事件，移到到触发源时自动触发事件onmouseover
+//			window.onload = function(){
+//				document.getElementById("tupian").onmouseover = function(){
+//					alert("不要这样子啊啊啊啊 啊");
+//				}
+//			}
+			
+			//鼠标离开事件，离开时触发
+			window.onload = function(){
+				document.getElementById("tupian").onmouseout = function(){
+					alert("最后一次，睡觉了");
+				}
+			}
+
+			
+			
+		</script>
+	</head>
+	<body>
+		<img src="img/004.jpeg" id="tupian"/>
+	</body>
+</html>

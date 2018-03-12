@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		#run{
+			position: absolute;
+			top: 50px;
+		}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				//抓取元素
+				var but = document.getElementById("but");
+				var run = document.getElementById("run");
+				var pao= 10;
+				//添加点击事件
+		 but.onclick=function(){
+				setInterval(function (){//点击后每1秒跑10px
+						//获得右边跑left的初始值
+					var old_left = run.style.left;
+						//每秒向右跑的步数的值
+					var new_left = parseInt(run.style.left)+pao;
+						//赋值回元素的初始值
+					run.style.left = new_left+"px";	
+						//如果想让人在700处停下，怎么判断
+//						if(new_left == 700){
+//							//让定时器消失
+//							pao = -10;	
+//						}else if(new_left==0){
+//							pao = 10;
+//						}
+						if (new_left == 700|| new_left==0) {
+							pao =pao*-1;
+						} 
+						
+						
+					},100)
+					
+					
+				}
+	
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="but" value="点击，跑！" />
+		<br /><br />
+		<img src="img/run.gif" id="run" style="left: 0px;"/>
+	</body>
+</html>

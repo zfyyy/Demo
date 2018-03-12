@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//		2、自定义一个函数(对数组中的元素排序)
+//		    var shuzu = [10,75,44,32,30,7]
+			
+//				var arr = [10,75,44,32,30,7]
+//					function sz(x,y){	//专门用来数组排序的函数，js算法
+//						return x-y;
+//					}
+//				
+//					var jieguo = arr.sort(sz);
+//					document.write(jieguo);
+			
+//			
+//				冒泡排序
+//			function chongfu(arr){
+//				for (a=0;a<arr.length;a++) {//循环数组a元素
+////			document.write(arr[a])
+//					for (b=0;b<arr.length;b++) {//循环数组b元素
+////				document.write(arr[b])
+//						if(arr[a]>arr[b]){//比较arr【a】和arr【b】的大小，如果a大于b，2个数位置调换。举例：75>10
+//							ls = arr[a];//a大于b位置调换，设临时存放值ls，存放arr【a】的值,举例：arr【a】=75，ls=75，
+//							arr[a]=arr[b];//然后arr【b】赋值于arr【a】，举例：b=10，arr【a】=10；
+//							arr[b]=ls;//最后ls赋值于arr【b】，arr【b】=75；
+//						}
+//					}
+//				}
+//				return arr;//返回值存在arr变量里
+//			}
+//		var sz = [10,75,44,32,30,7];
+//		var jieguo = chongfu(sz);
+//		document.write(jieguo);
+		
+		
+				var arr = [10,75,44,32,30,7];
+					var compare = function (x, y) {
+					    if (x < y) {
+					        return -1;
+					    } else if (x > y) {
+					        return 1;
+					    } 
+					}
+					var re = arr.sort(compare);
+					document.write(re)
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

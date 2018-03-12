@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--点一次色块增加10px宽度练习-->
+		<style type="text/css">
+			#one{
+				height: 200px;
+				background-color: pink;
+			}
+			#btn{
+				margin-left: 24px;
+			}
+		</style>
+		<script type="text/javascript">
+//			window.onload=function dao(){
+////			把所有元素先抓取过来，方便用
+//			var btn = document.getElementById("btn");
+//			var one = document.getElementById("one");
+//			
+//					btn.onclick = function (){//添加单击事件
+//				
+//					var old_width =one.style.width;//获取元素的宽度
+//				
+//					var new_width =parseInt(old_width)+10;//获取元素新的宽度
+//					
+//					one.style.width = new_width+"px";//将新得到的宽度赋值回一开始的宽度
+//					
+//					}		
+//			}
+			
+			//每隔2秒增加10px宽度的练习
+		var jiesu = setInterval(function(){
+			
+					var btn = document.getElementById("btn");
+					var one = document.getElementById("one");
+					
+					var old_wid = one.style.width;//获取元素的宽度
+					
+					var new_wid = parseInt(one.style.width)+10;//获取元素新的宽度
+					
+					one.style.width =new_wid+"px";//将新得到的宽度赋值回一开始的元素
+//					setInterval(function(){
+//						clearInterval(jiesu)
+//					},4000)
+				},1000);
+				
+				//10秒后停止
+//				setTimeout(function(){
+//					clearTimeout(jiesu);
+//				},10000)
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点一次粉色块会增加10px宽度"/>
+		<br /><br />
+		<div id="one" style="width: 250px;"></div>
+	</body>
+</html>

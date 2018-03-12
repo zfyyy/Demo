@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>怎么解决处理这个buff？</title>
+		<style type="text/css">
+			#img{
+				position: absolute;
+				top: 40px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload =function(){
+				//抓取元素
+				var btn =document.getElementById("btn");
+				var img =document.getElementById("img");
+				var time;//先创建一个变量
+				//创建单击事件
+				btn.onclick =function(){
+					//怎么让定时器执行一次后，删除这一次的定时器
+					clearInterval(time);
+					//点击让他自动跑，添加定时器
+					time =setInterval(function(){
+						var start_left = img.style.left;
+						var new_left =parseInt(img.style.left)+10;
+						img.style.left =new_left+"px";
+					},100)
+					
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点我" />
+		<img src="img/run.gif" id="img" style="left: 0px;"/>
+	</body>
+	<!--因为函数每次运行的时候都会请求开辟一个空间，例如windw是一个函数，他在运行的时候，会开辟出一个空间，所以每点击一个就会开辟出一个函数空间，例如点击10次就开辟了10个空间，全部空间的left加起来，所以才越来越快，要解决这个buff的话看上面代码-->
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+    	body{
+    		background-color:red;
+    	}
+    </style>
+    
+	</head>
+	<body>
+			<div class="box">
+    		<div class="a" id="aa" style="background-color:red;width:100px;height: 20px;"></div>
+    		<div class="b" id="bb" style="background-color:green;width:100px;height: 20px;"></div>
+    		<div class="c" id="cc" style="background-color:blue;width:100px;height: 20px;"></div>
+    		<div class="d" id="dd" style="background-color:pink;width:100px;height: 20px;"></div>
+    	</div>
+    	<script>
+    	var aa=document.getElementById("aa");
+    	var bb=document.getElementById("bb");
+    	var cc=document.getElementById("cc");
+    	var dd=document.getElementById("dd");
+    	document.getElementById("aa").onclick=function(){
+    		document.body.style.backgroundColor="red";
+    	}
+    	bb.onclick=function(){
+    		document.body.style.backgroundColor="green";
+    	}
+    	cc.onclick=function(){
+    		document.body.style.backgroundColor="blue";
+    	}
+    	dd.onclick=function(){
+    		document.body.style.backgroundColor="pink";
+    	}
+    </script>
+	</body>
+</html>

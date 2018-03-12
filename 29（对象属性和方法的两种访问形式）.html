@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var shouji= {
+				name:"华为",
+				weight:"55kg",
+				chicun:"6.4寸",
+				color:"黑色",
+				call:function(){
+					document.write("打电话");
+				}
+			}
+//			访问方法2种
+//			document.write(shouji.chicun);访问属性
+//			document.write(shouji["color"]);shouji["call"]();访问方法
+			shouji.name = "小辣椒";//替换属性
+			document.write(shouji.name,"<br />");
+			
+			var meizhu = shouji;//把对象shouji，指定为meizhu
+			document.write(meizhu["color"],"<br />");
+			
+			meizhu.price = "1000";//新增属性
+			document.write(meizhu.price,"<br />");
+			
+			meizhu.name = "魅族";
+			document.write(meizhu.name,"<br />");
+			
+			meizhu.game = function(){	//新增方法
+				document.write("打游戏")
+			}
+			//再说一遍2种访问方式
+//			document.write(meizhu["game"]);
+//			meizhu.game();
+
+			var xiaomi = shouji;//把对象shouji，指定为xiaomi
+			xiaomi.name = "小米";
+			document.write(xiaomi.name);
+//			document.write(meizhu.name)
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

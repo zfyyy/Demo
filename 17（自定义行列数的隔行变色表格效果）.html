@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>这是鱼爸爸的</title>
+	<script type="text/javascript">
+	
+		document.write("<table border='2'width='100%'>")//table标签
+		
+		var hangshu = prompt("请输入行数：");//自定义输入行数
+		var lieshu =prompt("请输入列数：");//自定义输入列数
+		
+		for (a=1;a<=hangshu;a++) {//控制行数
+			if (a%2) {//判断奇偶
+				document.write("<tr class='one'>")
+			} else{
+				document.write("<tr>")
+			}
+				
+			for (b=1;b<=lieshu;b++) {//控制行内个数
+				document.write("<td>"+a+"行"+b+"列</td>")
+																	//if(b%2){
+																	//document.write("<td class='one'>")
+																	//}else("<td>");
+			}
+		document.write("</tr>")
+		}
+		document.write("</table>")    //table标签结束
+		
+	</script>
+	<style type="text/css">
+		.one{
+			background: cadetblue;
+		}
+	</style>
+	</head>
+	<body>
+		
+	</body>
+</html>
+
+<!--<table border="" cellspacing="" cellpadding="">
+	<tr><th>Header</th></tr>
+	<tr><td>Data</td></tr>
+</table>-->

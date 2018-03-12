@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var human = {
+				name:"小明",
+				age:"18",
+				sex:"女",
+				hobby:"游戏",
+				run:function(){
+					document.write("跑步");
+				}
+			}
+			
+			//属性和方法的删除
+			var xiaoming = human;
+//			xiaoming = null;//销毁对象
+
+			delete xiaoming.name;//删除属性
+			document.write(xiaoming.name,"<br />");
+			
+			
+			
+			delete xiaoming.run;//删除方法
+			document.write(xiaoming["run"],"<br />");
+			
+			
+			
+			
+//			对象的遍历
+		for (a in xiaoming) {
+			document.write(a+"=>"+xiaoming[a],"<br />");
+		}
+			
+			
+		
+			
+		
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#love{
+				display: inline;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			window.onload = function(){
+				//抓取元素
+				var love=document.getElementById("love") ;
+				var btn = document.getElementById("btn");
+//				var btn2 = document.getElementById("btn2");
+				
+//				btn.onclick = function(){
+//					love.style.display = "none"
+//				}
+//				btn2.onclick = function(){
+//					love.style.display = "block"
+//				}
+
+				//方法：变量对应状态
+				var zhuangtai = "block"	//状态为block，图片隐藏；时，
+					
+					btn.onclick = function(){
+						if(zhuangtai == "block"){//状态为block，
+							
+							love.style.display = "none";//图片隐藏
+							zhuangtai = "none";//此刻状态为none隐藏
+							
+						}else if(zhuangtai == "none"){//再点击时，状态为none
+							
+							love.style.display = "block"//图片显示
+							zhuangtai = "block";//此刻状态为block显示
+							
+					}
+					
+				}
+				
+				
+		}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点击隐藏，再点击显示" />
+		<!--<input type="button" id="btn2" value="点击出现" />-->
+		<br /><br />
+		<img src="img/004.jpeg" id="love" style="border: 1px solid black;" />
+	
+	</body>
+</html>

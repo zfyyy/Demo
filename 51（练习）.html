@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--点一次色块增加10px宽度练习-->
+		<style type="text/css">
+			#one{
+				height: 200px;
+				background-color: pink;
+			}
+			#btn{
+				margin-left: 24px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+			//把 所有元素先抓取过来，方便用
+			var btn = document.getElementById("btn");
+			var one = document.getElementById("one");
+			
+		
+				
+				btn.onclick = function(){//添加单击事件
+				
+					var old_width =one.style.width;//获取元素的宽度
+				
+					var new_width =parseInt(old_width)+10;//获取元素新的宽度
+					
+					one.style.width = new_width+"px";//将新得到的宽度赋值回一开始的宽度
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点一次粉色块会增加10px宽度"/>
+		<br /><br />
+		<div id="one" style="width: 250px;"></div>
+	</body>
+</html>

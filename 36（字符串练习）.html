@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			1、将字符串中所有的后盾人都替换成****	
+//			var str ='后盾人php后盾人论坛后盾人网站后盾人学生'
+
+			var str ='后盾人php后盾人论坛后盾人网站后盾人学生'
+			while(str.match("后盾人")){
+				var str = str.replace("后盾人","****");
+			}
+			
+			document.write(str,"<br />");
+			
+			
+			
+			********
+			
+			
+			
+			
+//			2、查找字符串“后盾视频下载地址:bbs.houdunwang.com，论坛地址：bbs.houdunwang.com,官方网址：www.houdunwang.com” 将所有”houdunwang”出现的位置，打印出来
+
+				var str ="后盾视频下载地址:bbs.houdunwang.com，论坛地址：bbs.houdunwang.com,官方网址：www.houdunwang.com";
+				var re =[];	
+					while(str.match("houdunwang")){
+						var ls = str.indexOf("houdunwang")//将第一次检查到的houdunwang存入数组re
+						re.push(ls);
+						str = str.replace("houdunwang","**********");//将第一次检查到的houdunwang替换成等字符的符号
+					}
+					document.write(re);
+				
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

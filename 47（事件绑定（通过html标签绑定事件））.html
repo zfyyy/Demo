@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: wheat;
+			}
+			#kuai,#kuai1,#kuai2,#kuai3{
+				margin: auto;
+				width: 500px;
+				height: 100px;
+			}
+			#kuai{
+				background: red;
+			}
+			#kuai1{
+				background: yellowgreen;
+			}
+			#kuai2{
+				background:blueviolet;
+			}
+			#kuai3{
+				background: pink;	
+			}
+			
+		</style>
+		<script type="text/javascript">
+			function one(){
+				document.body.style.backgroundColor ="red";
+			}
+			function two(){
+				document.body.style.backgroundColor ="green";
+			}
+			function three(){
+				document.body.style.backgroundColor ="darkblue";
+			}
+			function four(){
+				document.body.style.backgroundColor ="pink";
+			}			
+		</script>
+	</head>
+	<body>
+		<!--通过标签绑定事件，这里的函数要加（）-->
+		<div id="kuai" onclick="one()"></div>
+		<div id="kuai1" onclick="two()"></div>
+		<div id="kuai2" onclick="three()"></div>
+		<div id="kuai3" onclick="four()"></div>
+	</body>
+</html>

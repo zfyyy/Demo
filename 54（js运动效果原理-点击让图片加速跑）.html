@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#img{
+				position: absolute;
+				top: 40px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload =function(){
+				//抓元素
+			var btn = document.getElementById("btn");
+			var img = document.getElementById("img");
+			var pao = 10;
+			//建立单击事件
+			btn.onclick = function(){
+				setInterval(function(){//添加定时器，使人物每秒往右跑10px
+						pao++;
+						 var old_left =img.style.left;//获得初始值
+				  		 var new_left =parseInt(img.style.left)+pao;//加10，获得新增
+				  		 img.style.left = new_left+"px"//赋值回初始值
+						
+				},100)
+				  
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点一下加速跑" />
+		<img src="img/run.gif" id="img" style="left: 0px;"/>
+	</body>
+</html>
