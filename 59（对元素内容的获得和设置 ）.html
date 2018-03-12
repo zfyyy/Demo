@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			
+			window.onload = function(){
+				
+				//抓取元素
+			var btn = document.getElementById("btn");
+			var wenzi = document.getElementById("wenzi");
+			
+			//增加单击事件
+			btn.onclick =function(){
+				
+				//设置或获取对象起始和结束标签内的内容(识别html标签)
+				//在这个标签里如果有其他标签,也会直接输出
+				var a =wenzi.innerHTML;	
+//				alert(a);
+
+//				wenzi.innerHTML ="我是一只单身狗"//设置标签里面的内容，再点击内容改变
+				
+				//IE
+				var b =wenzi.innerText;//获取和设置对象起始和结束标签内的文字内容（不识别html标签）
+//				alert(b)
+				
+				//其他浏览器，低版本ie没有这个属性
+				var c = wenzi.textContent;//获取和设置对象起始和结束标签内的文字内容（不识别html标签）
+//				alert(c);
+
+				
+				//判断兼容性，这样判断所有浏览器都可以运行
+				if(document.all){
+					wenzi.innerHTML ="大家好，我是IE呀"
+					var d = wenzi.innerText;//适用ie
+				}else{
+					wenzi.textContent ="大家好，我是火狐，谷歌等"
+					var d = wenzi.textContent;//适用其他浏览器
+				}
+				alert(d);
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点击我" />
+		<h1 id="wenzi">大家好，我是帅气的<span>鱼爸爸</span></h1>
+	</body>
+</html>

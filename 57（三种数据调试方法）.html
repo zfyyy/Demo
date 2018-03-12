@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三种数据调试方法 dom抓元素</title>
+		<style type="text/css">
+			#pink{
+				background: pink;
+				margin: auto;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				//抓取元素
+				
+				var btn = document.getElementById("btn");
+				var pink = document.getElementById("pink");
+				var time;
+				var wid=5;
+				var hig=5;
+				//创建单击事件
+				btn.onclick = function(){
+					
+						clearInterval(time);
+						time = setInterval(function(){
+						
+						var starWid = pink.style.width;
+						var newWid = parseInt(pink.style.width)+wid;
+						pink.style.width= newWid+"px";
+						
+						var starHig =pink.style.height;
+						var newHig = parseInt(pink.style.height)+hig;
+						pink.style.height = newHig+"px";
+						
+						if (newWid==500&&newHig==500) {
+							wid =-10,hig=-10;
+						} else if(newWid==0&&newHig==0){
+							wid=10,hig=10;
+						}	
+//						alert(document.title)查看标题
+//						document.title = "nimeimeid"改标题
+
+
+						//数据调试三种方法
+//							alert("宽度为："+newWid);//这个慎得慌
+//							console.log(newWid);//控制台查看
+							document.title =newWid;//标题查看
+					},100)
+				}
+			}
+		</script>
+
+
+
+
+<body>
+		<input type="button" id="btn" value="点我" />
+		
+		
+		
+		
+		<div id="pink" style="width:200px;height:200px;">
+			
+		</div>
+	</body>
+</html>

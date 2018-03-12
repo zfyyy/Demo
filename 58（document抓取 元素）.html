@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+
+		</style>
+		<script type="text/javascript">
+			window.onload =function(){
+				//用id来抓取元素，id具有唯一性
+//				document.getElementById("one").style.color = "red"
+					
+				//通过class来抓取元素
+//				var sz = document.getElementsByClassName("fense");
+//				sz[0].style.color ="#008000"
+			
+				//通过标签名抓取元素
+//				var sz1 = document.getElementsByTagName("p")
+//					sz1[1].style.color = "green"
+
+				//通过name属性抓元素
+//				var sz3 = document.getElementsByName("hd")
+//				sz3[0].style.color ="deeppink"
+//				
+
+				for (i=0;i<=sz1.length;i++) {
+				sz1[i].style.color = "red"
+			}
+				
+//				另一种抓取方式
+//				document.getElementsByTagName("p").getElementById("one");
+			}
+				
+		</script>
+	</head>
+	<body>
+		<p id="one">最帅的鱼爸爸 1</p>
+		<p>最帅的鱼爸爸 2</p>
+		<p class="fense">最帅的鱼爸爸 3</p>
+		<p class="fense">最帅的鱼爸爸 4</p>
+		<p  class="fense">最帅的鱼爸爸 5</p>
+		<p>最帅的鱼爸爸 6</p>
+		<p>最帅的鱼爸爸 7</p>
+		<p name="hd">最帅的鱼爸爸 8</p>
+		<p name="hd">最帅的鱼爸爸 9</p>
+		<!--注意：class,标签名和name属性抓到的会以数组的形式排列出现-->
+	</body>
+</html>

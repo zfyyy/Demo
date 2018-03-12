@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var shuzi =document.getElementById("text").getElementsByClassName("shuzi")[0];//抓取元素
+				
+				setInterval(function(){//增加定时器
+					var num = shuzi.innerHTML;//获得span里的内容5
+					var newnum = shuzi.innerHTML-1;//每次减1秒
+					shuzi.innerHTML = newnum; //赋值回去shuzi.innerHTML
+					
+					//判断跳转
+					if (newnum==0) {
+						location.replace("http://www.jumei.com");
+					} 
+				},1000)
+			}
+		</script>
+	</head>
+	<body>
+		<p id="text">页面不存在，将在<span class="shuzi">5</span>秒后进行跳转，无网络的时候为刷新</p>
+	</body>
+</html>
