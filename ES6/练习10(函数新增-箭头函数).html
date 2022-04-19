@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    // 拓展运算符...
+    // function fn(a,b,...args){
+    //     console.log(a,b,args)
+    // }
+    // fn(1,2,3,3,4,4)
+
+    // 箭头函数
+    // var fn=(a,...r)=>{
+    //     console.log(a,r)
+    // }
+    // fn(1,2,4,5,3,6)
+    
+    // 一个参数可去掉括号，一条表达式可以去掉{}，省略return
+    // var fn=a=>a*3
+    // console.log(fn(1))
+    
+    // 输出对象的话，要加（），不然会把函数{}里的，当函数体执行
+    // var fn=a=>({main:3})
+    // console.log(fn())
+    
+    // 箭头函数this指向window，
+    // var fn=(a,b)=>{
+    //     console.log(this)
+    // }
+    // fn()
+
+    // 箭头函数里面没用arguments，
+    // var fn=(a,b)=>{
+    //     console.log(arguments)
+    // }
+    // fn()
+    
+    // 不能修改this指向
+    // var fn=(a,b)=>{
+    //     console.log(a)
+    // }
+    // fn().bind({a:1})
+
+    // function fn(a,b){
+    //     console.log(this)
+    // }
+    // fn.bind({a:1})
+    // console.log(fn(1,2))
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let s=Symbol() //Symbol()
+    // let s1=Symbol("a")  //Symbol("a")
+    // let s2=Symbol("b")
+    // let obj={
+    //     a:1,
+    // }
+    // obj.b=2
+    // let a=Symbol("c")
+    // obj[a]=3
+    // console.log(obj)
+    let obj={
+        a:1,
+        b:2
+    }
+    let a=Symbol("a")
+    let b=Symbol("b")
+    
+    obj[a]=5
+    obj[b]=6
+    console.log('obj====',obj)
+    console.log('obj[a]====',obj[a])
+    console.log('obj[b]====',obj[b])
+
+    
+    console.log("遍历Symbol====",Object.getOwnPropertySymbols(obj))
+    </script>
+</body>
+</html>

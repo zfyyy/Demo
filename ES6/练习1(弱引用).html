@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //垃圾回收
+    // let setMap=new Map()
+    let setWeakMap=new WeakMap()
+    
+    let a={
+        name:"小夏",
+        age:0
+    }
+    let b={
+        name:"夏普",
+        age:1
+    }
+
+    // setMap.set(a,"a1")
+    // setMap.set(b,"b1")
+    // console.log(setMap)
+    setWeakMap.set(a,"a1")
+    setWeakMap.set(b,"b1")
+    console.log(setWeakMap)
+
+    
+
+    </script>
+</body>
+</html>

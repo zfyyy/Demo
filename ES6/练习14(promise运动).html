@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+            function $(id){
+                return document.getElementById(id)
+            }
+            function movePromis(obj,attr,target,duration){
+                return new Promise((res,rej)=>{
+                        var b=parseInt(getComputedStyle(obj)[attr])  //获取元素对象最终属性
+                        var c=target-b  //目标值-元素属性值
+                        var d=duration //持续时间
+                        var temp=new Date().getTime()  //获取当前时间，转换成毫秒
+                        var timer=setInterval(function(){
+                            var t=new Date().getTime()-temp  //获取当前时间-上次获取的当前时间
+                            if(t>=d){   //获取当前时间>=持续时间
+                                clearInterval(timer); //停止运动
+                                t=d;
+                            }
+                            var v=c/d*t+b;
+                            obj.style[attr]=v+"px"  //获取元素的样式属性值
+                            if(t===d){
+                               res()
+                            }
+
+                        },20)
+                })
+            }
+            movePromis($("box"),"height",200,500)
+            .then(()=>movePromis($("box"),"height",200,500))
+            .then(()=>movePromis($("box"),"left",200,500))
+            .then(()=>{
+                console.log("done")
+                
+            })
+
+            // function move(obj,attr,target,duration,callback){
+            //     var b=parseInt(getComputedStyle(obj)[attr])  //获取元素对象最终属性
+            //     var c=target-b  //目标值-元素属性值
+            //     var d=duration //持续时间
+            //     var temp=new Date().getTime()  //获取当前时间，转换成毫秒
+            //     var timer=setInterval(function(){
+            //         var t=new Date().getTime()-temp  //获取当前时间-上次获取的当前时间
+            //         if(t>=d){   //获取当前时间>=持续时间
+            //             clearInterval(timer); //停止运动
+            //             t=d;
+            //         }
+            //         var v=c/d*t+b;
+            //         obj.style[attr]=v+"px"  //获取元素的样式属性值
+            //         if(t===d){
+            //             typeof callback ==="function" && callback()
+            //         }
+            //         console.log("t===",t)
+            //         console.log("v===",v)
+            //     })
+            //     console.log("b===",b)
+            //     console.log("c===",c)
+            //     console.log("duration===",c)
+            //     console.log("temp===",temp)
+            //     console.log(typeof callback ==="function" && callback())
+            // }
+            // move($("box"),"width",200,500,function(){
+            //     move($("box"),"height",200,500,function(){
+            //         move($("box"),"left",200,500,function(){
+            //              console.log("done")
+            //         })
+            //     })
+            // })
+        
+            </script>
+</body>
+</html>

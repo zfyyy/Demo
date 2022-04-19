@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pre{
+            constructor(name,age){
+                this.name=name
+                this.age=age
+            }
+            //静态方法
+            static isChart(obj){
+                return obj instanceof Pre
+            }
+            say(){
+                console.log("我是say")
+            }
+        }
+        // 静态属性
+        Pre.staticProps="我是静态属性"
+        let p=new Pre("小米",20)      
+
+        class Pre2 extends Pre{
+            constructor(name,age,money){
+                super(name,age)
+                this.money=money
+            }
+        }
+        let p2=new Pre2("小资",20,100)
+        // console.log(p2)   //{name: "小资", age: 20, money: 100}
+
+        class Pre3 extends Pre2{
+            constructor(name,age,money,id){
+                super(name,age,money)
+                this.id=id
+            }
+        }
+        let p3=new Pre3("小小",20,1000,"学生")
+        p3.say()
+        console.log(p3)   
+        
+
+
+
+        </script>
+</body>
+</html>

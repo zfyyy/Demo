@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 牛逼字符串` `  ${}
+    let classStr="yellow"    
+    let html= `<ul>
+                <li class="red"></li>
+                <li></li>
+                <li class="${classStr}"></li>
+               </ul>`
+    console.log('html===',html)
+
+
+    function fn(){
+        return "main"
+    }
+    console.log(`fn结果是 ${ fn() }`)
+
+    
+    let isRain=true
+    console.log(`今天是 ${isRain?"雨天":"晴天"}`)
+    </script>
+</body>
+</html>

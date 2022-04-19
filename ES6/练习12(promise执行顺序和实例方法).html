@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <script>
+        //1,5,2,6,3,4 
+        // console.log(1)    
+
+        // let p=new Promise((res,rej)=>{
+        //     console.log(5)
+        //     res()
+        // }).then(()=>{
+        //     console.log(6)
+        // })
+
+        // setTimeout(()=>{
+        //     console.log(3)            
+        // })
+
+        // setTimeout(()=>{
+        //     console.log(4)            
+        // })
+
+        // console.log(2)
+            // then() //返回数据
+            // catch() //返回错误信息
+            // finally() //结束，无需参数
+
+        var p=new Promise((res,rej)=>{
+            res("success")
+        }).then((data)=>{
+            console.log("1",data)
+            var p2=new Promise((res1,rej1)=>{
+                res1("success1")
+            }).then((data)=>{
+                console.log("1",data)
+            })
+        }).then((data)=>{
+            console.log("ss1:",data)
+        }).then((data)=>{
+            console.log("ss2:",data)
+            a
+        }).catch((data)=>{
+            console.log(data)
+        }).finally(()=>{
+            console.log("over","执行结束咯！")
+        })
+    </script>
+<body>
+    
+</body>
+</html>

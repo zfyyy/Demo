@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arrty="width"
+        // let arr=[]
+        // let object={}
+        // let attFn="fn"
+        // let obj={
+        //     [arrty]:600,
+        //     [arr]:1,
+        //     [object]:4,
+        //     [attFn](){
+        //         console.log("woshi")
+        //     }
+        // }
+        // obj.fn()
+
+            // console.log(Object.is(1,1))
+            // console.log(Object.is(1,"1"))
+            // console.log(Object.is(NaN,NaN))
+            // 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。
+        function mo(obj){
+            let defaultObj={
+                color:"red",
+                age:0
+            }
+            let param={}
+            Object.assign(param,defaultObj,obj)
+            console.log(param)
+        }
+        mo({
+            color:"white",
+            age:111
+        })
+    </script>
+</body>
+</html>
